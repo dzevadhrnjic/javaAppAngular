@@ -1,0 +1,76 @@
+<div class="col-sm-3">
+    <div style="margin: 10px;" >
+        <button class="btn btn-primary btn-lg btn-block" (click)="onCustomerButtonClick(); openDialog()">Create Customer</button>
+        
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-secondary btn-lg btn-block" (click)="onTransactionButtonClick(); openDialog()">Create Transaction</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-primary btn-lg btn-block" (click)="onVehicleButtonClick()">Add Vehicle</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-secondary btn-lg btn-block" (click)="onLicensePlateButtonClick()">Add License Plate</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-primary btn-lg btn-block" (click)="onCustomerIdButtonClick()">List Vehicles By
+            CustomerId</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-secondary btn-lg btn-block"  (click)="onButtonClickUnassignedVehicles()">Show unassigned
+            vehicles</button>
+        <app-unassigned-vehicles [vehicles1]="vehicles"></app-unassigned-vehicles>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-primary btn-lg btn-block" (click)="onButtonClickCustomerTransactions()">Show customer
+            transactions</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-secondary btn-lg btn-block"  (click)="onButtonClickShowTransactions()">Show transactions Payment or
+            Fee</button>
+        <app-list-transactions-types [transactions]="transactions"></app-list-transactions-types>
+
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-primary btn-lg btn-block"  (click)="onButtonClickShowCustomerByCar()">Show customer by
+            car</button>
+        <app-list-customers [customers]="customers"></app-list-customers>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-secondary btn-lg btn-block" (click)="onButtonClickShowCustomerbyLP()">Show customer by license
+            plate</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-primary btn-lg btn-block" (click)="onButtonClickShowCustomerByTAndVT()">Show customer by tt and
+            vt</button>
+        <app-list-customer-by-transaction-vehicle [customersTV]="customersTV">
+        </app-list-customer-by-transaction-vehicle>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-secondary btn-lg btn-block" (click)="onButtonClickCustomerByDateAndUnassigned()">Show customer by
+            date and unassigned</button>
+    </div>
+
+    <div style="margin: 10px;">
+        <button class="btn btn-primary btn-lg btn-block" (click)="onButtonClickShowCarsByLPState()">Show customer lp
+            state</button>
+        <app-list-vehicles-by-state [vehiclesState]="vehiclesState"></app-list-vehicles-by-state>
+
+    </div>
+
+    <app-dynamic-input-component [inputType]="inputTypeApi" [inputFields]="parentInputFields">
+    </app-dynamic-input-component>
+
+</div>
+

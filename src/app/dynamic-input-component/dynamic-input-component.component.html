@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{data.inputType}}</h2>
+<mat-dialog-content formGroup="form">
+    <mat-form-field appearance="fill" *ngFor="let inputField of data?.inputFields; let index= index">
+        <mat-label>{{inputField.label}}</mat-label>
+        <input matInput id="inputField[index].id" placeholder="{{inputField.placeholder}}"
+            [(ngModel)]="data.inputFields[index].inputValue">
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button mat-primary" (click)="onSaveButtonClick()">Save/List</button>
+</mat-dialog-actions>
+
+
+
+<app-list-vehicles [vehicles]="vehicles"></app-list-vehicles>
+<app-list-transactions [transactions]="transactions"></app-list-transactions>
+<app-list-customer-by-license-plate [customers]="customers"></app-list-customer-by-license-plate>
+<app-list-customer-date-vehicle [customersDUV]="customersDUV"></app-list-customer-date-vehicle>

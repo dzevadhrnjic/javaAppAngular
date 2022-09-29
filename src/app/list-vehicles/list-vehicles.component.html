@@ -1,0 +1,17 @@
+<!-- <h2>Child Component 5</h2>
+
+<div class="form-group">
+    <label>Customer Account Id</label>
+    <input class="form-control" placeholder="Customer Account Id" [(ngModel)]="customerAccountId">
+    <button (click)="onClickSearchVehicles()">Search Vehicles</button>
+
+</div> -->
+
+<ul>
+    <li *ngFor="let vehicle of vehicles">
+<p>Vehicle Id:{{vehicle.vehicleId}}</p>
+<p>Vehicle Type Id:{{vehicle.vehicleTypeId}}</p>
+<p>Customer Account Id:{{vehicle.customerAccountId}}</p>
+<p>Is assigned: {{vehicle.isAssigned}}</p>
+    </li>
+</ul>
